@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0",
+	"version": "0.7.3",
 	"name": "BubblePop",
 	"description": "Bubble popping game",
 	"launch_path": "menu.html",
