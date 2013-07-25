@@ -1,0 +1,16 @@
+{
+	"version": "1.0.0",
+	"name": "BubblePop",
+	"description": "Bubble popping game",
+	"launch_path": "menu.html",
+	
+	"icons": {
+		"128": "/images/icons/icon-128.png"
+	},
+	
+	"developer": {
+		"name": "Isti115"
+	},
+	
+	"default-locale": "en"
+}

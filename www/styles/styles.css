@@ -1,0 +1,52 @@
+@import "colors.css";
+
+html, body
+{
+	height: 100%;
+	
+	margin: 0px;
+	padding: 0px;
+	
+	overflow: hidden;
+}
+
+#menu_container
+{
+	height: 100%;
+	background-color: #0000ff;
+}
+
+#header
+{
+	height: 20%;
+	
+	background-color: #ff0000;
+}
+
+#field_container
+{
+	height: 70%;
+	
+	background-color: #00ff00;
+}
+
+#footer
+{
+	height: 10%;
+	background-color: #0000ff;
+}
+
+#field
+{
+	border-collapse: collapse;
+}
+
+td
+{
+	width:30px;
+	height:30px;
+	
+	background: url("../images/bubble_outer.png");
+	
+	background-size: 100%;
+}
