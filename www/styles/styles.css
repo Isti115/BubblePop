@@ -13,27 +13,19 @@ html, body
 #menu_container
 {
 	height: 100%;
-	background-color: #0000ff;
+	background-color: #55cc55;
 }
 
 #header
 {
-	height: 20%;
+	height: 100px;
 	
-	background-color: #ff0000;
+	background-color: #cc5555;
 }
 
 #field_container
 {
-	height: 70%;
-	
-	background-color: #00ff00;
-}
-
-#footer
-{
-	height: 10%;
-	background-color: #0000ff;
+	height: 320px;
 }
 
 #field
@@ -49,4 +41,19 @@ td
 	background: url("../images/bubble_outer.png");
 	
 	background-size: 100%;
+}
+
+#footer
+{
+	height: 64px;
+	background-color: #5555cc;
+	
+	font-size: 25px;
+}
+
+#undoButton
+{
+	float:right;
+	
+	font-size: 25px;
 }
