@@ -12,5 +12,7 @@
 		"name": "Isti115"
 	},
 	
-	"default-locale": "en"
+	"default-locale": "en",
+	
+	"orientation": "portrait-primary"
 }

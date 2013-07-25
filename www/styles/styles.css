@@ -2,7 +2,9 @@
 
 html, body
 {
-	height: 100%;
+	/*height: 100%;*/
+	width: 320px;
+	height: 480px;
 	
 	margin: 0px;
 	padding: 0px;
@@ -18,11 +20,27 @@ html, body
 	text-align: center;
 }
 
+.display
+{
+	font-size: 25px;
+}
+
+.displayImage
+{
+	width: 32px;
+	height: 32px;
+	
+	vertical-align: middle;
+}
+
 #header
 {
-	height: 100px;
+	height: 80px;
 	
-	background-color: #cc5555;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	
+	background-color: #55cc55;
 }
 
 #field_container
@@ -68,6 +86,15 @@ html, body
 	font-size: 25px;
 }
 
+#leaderboard_container
+{
+	height: 350px;
+	
+	padding:15px;
+	
+	background-color: #cc5555;
+}
+
 #leaderboard
 {
 	margin: auto;
@@ -76,5 +103,24 @@ html, body
 	border-width: 2px;
 	border-color: #000000;
 	
-	font-size: 20px;
+	font-size: 22px;
+	
+	border-collapse: collapse;
+}
+
+#leaderboard td
+{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+
+#leaderboard td.name
+{
+	font-weight: 800;
+}
+
+#colorDecrement, #colorCountLabel, #colorIncrement
+{
+	font-size: 25px;
 }

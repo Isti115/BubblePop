@@ -1,7 +1,5 @@
 function init()
 {
-	alert("highscores...");
-	
 	if(!localStorage.getItem("highscores"))
 	{
 		var highscores = [];
@@ -22,7 +20,7 @@ function init()
 	{
 		bodyContent += "<tr>";
 		
-		bodyContent += "<td>" + (i + 1) + "</td><td>" + highscores[i].name + "</td><td>" + highscores[i].score + "</td>";
+		bodyContent += "<td>" + (i + 1) + ".</td><td class='name'>" + highscores[i].name + "</td><td>" + highscores[i].score + "</td>";
 		
 		bodyContent += "</tr>";
 	}

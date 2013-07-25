@@ -71,6 +71,11 @@ function press(i, j)
 	else
 	{
 		field = oldfield;
+		
+		if(true || "vibrate" in window.navigator)
+		{
+			window.navigator.vibrate(100);
+		}
 	}
 }
 
