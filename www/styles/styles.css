@@ -14,6 +14,8 @@ html, body
 {
 	height: 100%;
 	background-color: #55cc55;
+	
+	text-align: center;
 }
 
 #header
@@ -33,19 +35,27 @@ html, body
 	border-collapse: collapse;
 }
 
-td
+.fieldCell
 {
 	width:30px;
 	height:30px;
-	
-	background: url("../images/bubble_outer.png");
+}
+
+.circle
+{
+	background-image: url("../images/bubble_outer.png");
 	
 	background-size: 100%;
 }
 
 #footer
 {
-	height: 64px;
+	position: absolute;
+		top: 420px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	
 	background-color: #5555cc;
 	
 	font-size: 25px;
@@ -53,7 +63,18 @@ td
 
 #undoButton
 {
-	float:right;
+	float: right;
 	
 	font-size: 25px;
+}
+
+#leaderboard
+{
+	margin: auto;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+	
+	font-size: 20px;
 }

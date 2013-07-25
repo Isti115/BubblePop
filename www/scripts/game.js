@@ -16,6 +16,8 @@ function init()
 	field = new Array();
 	score = 0; prevScore = 0;
 	
+	document.getElementById("submitButton").addEventListener("click", scoreSubmit, false);
+	
 	undoButton = document.getElementById("undoButton");
 	undoButton.disabled = true;
 	undoButton.addEventListener("click", undo, false);
@@ -48,7 +50,7 @@ function init()
 
 function press(i, j)
 {
-	if (field[i][j] == 0) {return;};
+	if (field[i][j] == 0) {return;}
 	
 	var oldfield = copy(field);
 	var marked = field;
@@ -137,6 +139,55 @@ function rearrange()
 	}
 }
 
+function draw()
+{
+	for(var k = 0; k < field.length; k++)
+	{
+		for(var l = 0; l < field[k].length; l++)
+		{
+			document.getElementById(k + "_" + l).className = localStorage.getItem("useSquare") ? "fieldCell " + colors[field[k][l]] : "fieldCell circle " + colors[field[k][l]];
+		}
+	}
+	
+	document.getElementById("scoreLabel").innerHTML = score;
+}
+
+function scoreSubmit()
+{
+	var name = prompt("Please enter your name!");
+	var currScore = {"name": name, "score": score};
+	var highscores = JSON.parse(localStorage.getItem("highscores"));
+	highscores[highscores.length] = currScore;
+	
+	var sorted = false;
+	
+	while(!sorted)
+	{
+		sorted = true;
+		
+		for(var i = 0; i < highscores.length - 1; i++)
+		{
+			if(highscores[i+1].score > highscores[i].score)
+			{
+				var temp = highscores[i];
+				highscores[i] = highscores[i+1];
+				highscores[i+1] = temp;
+				
+				sorted = false;
+			}
+		}
+	}
+	
+	highscores = highscores.slice(0, 10);
+	
+	localStorage.setItem("highscores", JSON.stringify(highscores));
+}
+
+function copy(object)
+{
+	return JSON.parse(JSON.stringify(object));
+}
+
 function undo()
 {
 	field = copy(prevField);
@@ -145,22 +196,4 @@ function undo()
 	undoButton.disabled = true;
 	
 	draw();
-}
-
-function draw()
-{
-	for(var k = 0; k < field.length; k++)
-	{
-		for(var l = 0; l < field[k].length; l++)
-		{
-			document.getElementById(k + "_" + l).className = colors[field[k][l]];
-		}
-	}
-	
-	document.getElementById("scoreLabel").innerHTML = score;
-}
-
-function copy(object)
-{
-	return JSON.parse(JSON.stringify(object));
 }
