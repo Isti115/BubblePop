@@ -6,3 +6,8 @@
 .blue	{background-color: #0000ff;}
 .purple	{background-color: #ff00ff;}
 .black	{background-color: #000000;}
+
+td.white
+{
+	background-image: none;
+}

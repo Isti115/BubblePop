@@ -17,7 +17,13 @@ html, body
 	height: 100%;
 	background-color: #55cc55;
 	
+	font-size: 25px;
 	text-align: center;
+}
+
+#playButton
+{
+	margin-top: 10px;
 }
 
 .display
@@ -61,18 +67,14 @@ html, body
 
 .circle
 {
-	background-image: url("../images/bubble_outer.png");
+	background-image: url("../images/sphere.png");
 	
 	background-size: 100%;
 }
 
 #footer
 {
-	position: absolute;
-		top: 420px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
+	height: 80px;
 	
 	background-color: #5555cc;
 	
@@ -83,7 +85,14 @@ html, body
 {
 	float: right;
 	
+	margin: 5px;
+	
 	font-size: 25px;
+}
+
+.buttonImage
+{
+	cursor: pointer;
 }
 
 #leaderboard_container
