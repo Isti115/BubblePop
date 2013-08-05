@@ -162,7 +162,8 @@ function scoreSubmit()
 	var name = prompt("Please enter your name!");
 	var currScore = {"name": name, "score": score};
 	var highscores = JSON.parse(localStorage.getItem("highscores"));
-	highscores[highscores.length] = currScore;
+	var colorCount = parseInt(localStorage.getItem("colorCount"));
+	highscores[colorCount - 1][highscores[colorCount - 1].length] = currScore;
 	
 	var sorted = false;
 	
@@ -170,20 +171,20 @@ function scoreSubmit()
 	{
 		sorted = true;
 		
-		for(var i = 0; i < highscores.length - 1; i++)
+		for(var i = 0; i < highscores[colorCount - 1].length - 1; i++)
 		{
-			if(highscores[i+1].score > highscores[i].score)
+			if(highscores[colorCount - 1][i+1].score > highscores[colorCount - 1][i].score)
 			{
-				var temp = highscores[i];
-				highscores[i] = highscores[i+1];
-				highscores[i+1] = temp;
+				var temp = highscores[colorCount - 1][i];
+				highscores[colorCount - 1][i] = highscores[colorCount - 1][i+1];
+				highscores[colorCount - 1][i+1] = temp;
 				
 				sorted = false;
 			}
 		}
 	}
 	
-	highscores = highscores.slice(0, 10);
+	highscores[colorCount - 1] = highscores[colorCount - 1].slice(0, 10);
 	
 	localStorage.setItem("highscores", JSON.stringify(highscores));
 }
