@@ -55,9 +55,9 @@ html, body
 
 #header
 {
-	height: 80px;
+	height: 70px;
 	
-	padding: 10px 0px 10px 0px;
+	padding: 5px 0px 10px 0px;
 	text-align: center;
 	
 	background-color: #55cc55;
@@ -114,8 +114,19 @@ html, body
 	height: 300px;
 	
 	padding:15px;
+	padding-top: 5px;
 	
 	background-color: #cc5555;
+}
+
+#title
+{
+	margin: 0px;
+	
+	font-size: 20px;
+	font-weight: 800;
+	
+	text-align: center;
 }
 
 #leaderboard
@@ -126,7 +137,7 @@ html, body
 	border-width: 2px;
 	border-color: #000000;
 	
-	font-size: 19px;
+	font-size: 17px;
 	
 	border-collapse: collapse;
 }
@@ -159,8 +170,18 @@ html, body
 
 .colorCountSelector
 {
-	width: 45px;
+	width: 40px;
+	height: 40px;
+	
+	cursor: pointer;
 }
+
+#colorCountSelector_1 {background-image: url("../images/numbers/1.png");}
+#colorCountSelector_2 {background-image: url("../images/numbers/2.png");}
+#colorCountSelector_3 {background-image: url("../images/numbers/3.png");}
+#colorCountSelector_4 {background-image: url("../images/numbers/4.png");}
+#colorCountSelector_5 {background-image: url("../images/numbers/5.png");}
+#colorCountSelector_6 {background-image: url("../images/numbers/6.png");}
 
 #colorCountPrev, .colorCountSelector, #colorCountNext
 {

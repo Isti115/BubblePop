@@ -3,6 +3,8 @@ function init()
 	var highscores = JSON.parse(localStorage.getItem("highscores"));
 	var colorCount = parseInt(localStorage.getItem("colorCount"));
 	
+	document.getElementById("title").innerHTML = colorCount + " colors";
+	
 	var bodyContent = "";
 	
 	for(var i = 0; i < highscores[colorCount - 1].length; i++)

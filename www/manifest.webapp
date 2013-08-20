@@ -1,18 +1,18 @@
 {
-	"version": "0.8.8",
+	"version": "0.8.9",
 	"name": "BubblePop",
 	"description": "Bubble popping game",
-	"launch_path": "menu.html",
+	"launch_path": "/menu.html",
 	
 	"icons": {
-		"128": "/images/icons/icon-128.png"
+		"60": "/images/icons/icon-60.png",
+		"128": "/images/icons/icon-128.png",
+		"512": "/images/icons/icon-512.png"
 	},
 	
 	"developer": {
 		"name": "Isti115"
 	},
-	
-	"default-locale": "en",
 	
 	"orientation": "portrait-primary"
 }
