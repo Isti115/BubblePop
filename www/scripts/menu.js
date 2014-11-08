@@ -1,6 +1,6 @@
 "use strict";
 
-var version = 0.883;
+var version = 0.9;
 
 var colorCount;
 var colorDecrement, colorIncrement, colorCountImage;
